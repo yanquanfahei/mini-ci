@@ -1,9 +1,9 @@
 {
-  "name": "@eye-socket/mini-ci",
+  "name": "create-mini-ci",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@7.26.0",
-  "description": "",
+  "description": "小程序 CI，开启小程序开发工具，生成小程序预览码，上传小程序代码",
   "author": {
     "name": "眼圈发黑",
     "email": "1449826851@qq.com"
@@ -15,7 +15,11 @@
     "url": "git+https://github.com/yanquanfahei/mini-ci.git"
   },
   "bugs": "https://github.com/yanquanfahei/mini-ci/issues",
-  "keywords": [],
+  "keywords": [
+    "mini-ci",
+    "mp-alipay",
+    "mp-weixin"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -26,8 +30,12 @@
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "bin": {
+    "mini-ci": "./bin.js"
+  },
   "files": [
     "dist",
+    "bin.js",
     "package.json",
     "README.md"
   ],
