@@ -9,6 +9,10 @@
     "declaration": false,
     "sourceMap": false,
     "noUnusedLocals": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"],
+    }
   }
 }

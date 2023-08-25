@@ -51,11 +51,14 @@
     "prepublishOnly": "pnpm build",
     "release": "bumpp package.json --commit --push --tag && pnpm publish --access public"
   },
+  "dependencies": {
+    "cac": "^6.7.14",
+    "chalk": "^5.2.0"
+  },
   "devDependencies": {
     "@eye-socket/eslint-config-ts": "^0.0.2",
     "@types/node": "^18.13.0",
     "bumpp": "^9.0.0",
-    "chalk": "^5.2.0",
     "eslint": "^8.34.0",
     "lint-staged": "^13.1.2",
     "simple-git-hooks": "^2.8.1",

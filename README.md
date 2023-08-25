@@ -1,6 +1,6 @@
 # mini-ci
 
-小程序 CI，开启小程序开发工具，生成小程序预览码，上传小程序代码
+兼容多平台小程序 `CI` 工具，打开小程序开发工具，生成小程序预览码，上传小程序代码
 
 ## Install
 
@@ -26,7 +26,5 @@ pnpm create @eye-socket/mini-ci --upload
 Create `mini-ci.config.ts`:
 
 ```ts
-export default {
-
-}
+export default {}
 ```
