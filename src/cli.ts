@@ -1,9 +1,11 @@
 import cac from 'cac'
 import { VERSION } from './constants'
 import { resolveConfig } from './config'
-import { openWeixinDevtool } from './platform/weixin'
+import { openWeixinDevtool, weixinPreview } from './platform/weixin'
 
 const cli = cac('mini-ci')
+
+let config = null
 
 // common
 cli
@@ -16,7 +18,7 @@ cli
 cli
   .command('open', '打开开发者工具')
   .action(async (option) => {
-    const config = await resolveConfig(option)
+    config = await resolveConfig(option)
     console.log(config, 'config')
     if (config?.platform) {
       for (const platform of config?.platform) {
@@ -27,6 +29,24 @@ cli
               devToolsPort: config?.weixin?.devToolsPort,
               project: config?.weixin?.project
             })
+            break
+        }
+      }
+    }
+  })
+
+// preview
+
+cli
+  .command('preview', '预览')
+  .action(async (option) => {
+    config = await resolveConfig(option)
+    console.log(config, 'config')
+    if (config?.platform) {
+      for (const platform of config?.platform) {
+        switch (platform) {
+          case 'weixin':
+            weixinPreview(config.weixin!)
             break
         }
       }

@@ -7,16 +7,12 @@
   </view>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      title: 'Hello',
-    }
-  },
-  onLoad() {},
-  methods: {},
-}
+<script setup>
+import { onLoad } from '@dcloudio/uni-app'
+
+onLoad((option) => {
+  console.log(option);
+})
 </script>
 
 <style>
