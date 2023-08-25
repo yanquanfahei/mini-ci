@@ -1,1 +1,1 @@
-console.log('start node template!')
+import './cli'
