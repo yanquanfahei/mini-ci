@@ -22,7 +22,17 @@ type PreviewConfig = {
   compileCondition: string
 }
 
+type UploadConfig = {
+  version?: string
+  desc?: string
+  infoOutput?: string
+}
+
 export type WeixinConfig = {
+  /**
+   * 小程序 appId
+   */
+  appId?: string
   /**
    * 项目地址，从当前运行目录拼接
    */
@@ -43,4 +53,9 @@ export type WeixinConfig = {
    * 预览相关配置
    */
   preview?: PreviewConfig
+
+  /**
+   * 上传相关配置
+   */
+  upload?: UploadConfig
 }

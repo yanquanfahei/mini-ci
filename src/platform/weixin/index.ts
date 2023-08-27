@@ -69,6 +69,36 @@ export function weixinPreview (config: WeixinConfig) {
   execFileSync(cliPath, args, { stdio: 'inherit' })
 }
 
+export function weixinUpload (config: WeixinConfig) {
+  const { upload, devToolsPath, project } = config
+  const cliPath = getCliPath(devToolsPath)
+
+  if (!cliPath) return
+
+  const args = ['upload']
+
+  if (project) {
+    args.push('--project', resolve(rootPath, project))
+  }
+
+  if (upload) {
+    const { version, desc, infoOutput } = upload
+    if (version) {
+      args.push('--version', version)
+    }
+
+    if (desc) {
+      args.push('--desc', desc)
+    }
+
+    if (infoOutput) {
+      args.push('--info-output', infoOutput)
+    }
+  }
+
+  execFileSync(cliPath, args, { stdio: 'inherit' })
+}
+
 function getCliPath (devToolsPath: string | undefined) {
   const cliPath = join(devToolsPath || defaultDevtoolsPath, isWindows ? '/cli.bat' : '/Contents/MacOS/cli')
   if (!existsSync(cliPath)) {
