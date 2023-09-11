@@ -1,1 +1,2 @@
-import './cli'
+export * from './config'
+export * from './platform'

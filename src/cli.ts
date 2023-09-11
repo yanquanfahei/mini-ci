@@ -2,6 +2,7 @@ import cac from 'cac'
 import { VERSION } from './constants'
 import { resolveConfig } from './config'
 import { openWeixinDevtool, weixinPreview, weixinUpload } from './platform/weixin'
+import './platform/alipay'
 
 const cli = cac('mini-ci')
 
@@ -28,6 +29,8 @@ cli
               devToolsPort: config?.weixin?.devToolsPort,
               project: config?.weixin?.project
             })
+            break
+          case 'alipay':
             break
         }
       }

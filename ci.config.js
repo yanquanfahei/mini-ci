@@ -1,8 +1,8 @@
-import path from 'node:path'
-import { defineConfig } from './src/config'
+// import path from 'node:path'
+import { defineConfig } from './dist/index.js'
 
 export default defineConfig({
-  platform: ['weixin'],
+  platform: ['alipay'],
   weixin: {
     appId: 'wx3a602dc84f1c66c1',
     project: './playground/dist/build/mp-weixin',
@@ -17,5 +17,9 @@ export default defineConfig({
       version: '1.0.0',
       desc: '测试'
     }
+  },
+  alipay: {
+    appId: '2021003139676331',
+    project: './playground/dist/build/mp-alipay'
   }
 })

@@ -1,11 +1,11 @@
-import chalk from 'chalk'
+import colors from 'picocolors'
 
 const log = console.log
 
 export function logError (message: string) {
-  log(chalk.red(message))
+  log(colors.red(message))
 }
 
 export function logWarning (message: string) {
-  log(chalk.yellow(message))
+  log(colors.yellow(message))
 }
