@@ -2,7 +2,7 @@ import cac from 'cac'
 import { VERSION } from './constants'
 import { resolveConfig } from './config'
 import { openWeixinDevtool, weixinPreview, weixinUpload } from './platform/weixin'
-import './platform/alipay'
+import { openAlipayDevtool } from './platform/alipay'
 
 const cli = cac('mini-ci')
 
@@ -11,9 +11,7 @@ let config = null
 // common
 cli
   .option('-c, --config [file]', '[string] 配置文件名称')
-  .option('-p, --platform <platform>', '[weixin,alipay] 执行运行的平台', {
-    default: 'weixin'
-  })
+  .option('-p, --platform <platform>', '[weixin,alipay] 执行运行的平台')
 
 // open
 cli
@@ -31,6 +29,7 @@ cli
             })
             break
           case 'alipay':
+            openAlipayDevtool(config.alipay?.open)
             break
         }
       }

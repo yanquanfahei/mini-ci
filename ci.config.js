@@ -20,6 +20,10 @@ export default defineConfig({
   },
   alipay: {
     appId: '2021003139676331',
-    project: './playground/dist/build/mp-alipay'
+    project: './playground/dist/build/mp-alipay',
+    open: {
+      project: './playground/dist/build/mp-alipay',
+      lite: true
+    }
   }
 })

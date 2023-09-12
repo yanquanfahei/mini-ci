@@ -61,5 +61,9 @@ function mergeConfig (loadResult: Config | null, config: InlineConfig): Config {
     result.platform = config.platform.split(',') as Platform[]
   }
 
+  if (!config.platform && !result.platform) {
+    result.platform = ['weixin']
+  }
+
   return result
 }
