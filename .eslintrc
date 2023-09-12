@@ -1,3 +1,6 @@
 {
-  "extends": "@eye-socket/eslint-config-ts"
+  "extends": "@eye-socket/eslint-config-ts",
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": "off"
+  }
 }
