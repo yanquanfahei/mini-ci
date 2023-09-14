@@ -28,6 +28,10 @@ export default defineConfig({
     preview: {
       appId: '2021003139676331',
       project: './playground/dist/build/mp-alipay'
+    },
+    upload: {
+      appId: '2021003139676331',
+      project: './playground/dist/build/mp-alipay'
     }
   }
 })

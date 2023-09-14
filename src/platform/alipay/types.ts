@@ -1,4 +1,4 @@
-import type { IIDECommandOptions, IPreviewArgs } from 'minidev'
+import type { IIDECommandOptions, IPreviewArgs, IUploadOptions } from 'minidev'
 
 export type AlipayConfig = {
   appId: string
@@ -13,4 +13,9 @@ export type AlipayConfig = {
    * 预览参数
    */
   preview: IPreviewArgs
+
+  /**
+   * 上传参数
+   */
+  upload?: IUploadOptions
 }
