@@ -3,6 +3,7 @@ import { VERSION } from './constants'
 import { resolveConfig } from './config'
 import { openWeixinDevtool, weixinPreview, weixinUpload } from './platform/weixin'
 import { openAlipayDevtool, alipayPreview, alipayUpload } from './platform/alipay'
+import { openToutiaoDevtool } from './platform/toutiao'
 
 const cli = cac('mini-ci')
 
@@ -31,6 +32,9 @@ cli
           case 'alipay':
             openAlipayDevtool(config.alipay?.open)
             break
+
+          case 'toutiao':
+            openToutiaoDevtool(config.toutiao?.open)
         }
       }
     }

@@ -18,7 +18,8 @@
   "keywords": [
     "mini-ci",
     "mp-alipay",
-    "mp-weixin"
+    "mp-weixin",
+    "mp-toutiao"
   ],
   "exports": {
     ".": {
@@ -52,10 +53,12 @@
     "release": "bumpp package.json --commit --push --tag && pnpm publish --access public"
   },
   "peerDependencies": {
-    "minidev": "^1.9.3"
+    "minidev": "^1.9.3",
+    "tt-ide-cli": "^0.1.21"
   },
   "dependencies": {
-    "minidev": "^1.9.3"
+    "minidev": "^1.9.3",
+    "tt-ide-cli": "^0.1.21"
   },
   "devDependencies": {
     "@eye-socket/eslint-config-ts": "^0.0.2",

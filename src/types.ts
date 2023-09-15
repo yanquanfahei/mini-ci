@@ -1,7 +1,8 @@
 import { WeixinConfig } from './platform/weixin/types'
 import { AlipayConfig } from './platform/alipay/types'
+import { ToutiaoConfig } from './platform/toutiao/types'
 
-export type Platform = 'weixin' | 'alipay'
+export type Platform = 'weixin' | 'alipay' | 'toutiao'
 
 export interface Config {
   /**
@@ -17,4 +18,9 @@ export interface Config {
    * 支付宝相关配置
    */
   alipay?: AlipayConfig
+
+  /**
+   * 头条相关配置
+   */
+  toutiao?: ToutiaoConfig
 }

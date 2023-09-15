@@ -2,7 +2,7 @@
 import { defineConfig } from './dist/index.js'
 
 export default defineConfig({
-  platform: ['alipay'],
+  platform: ['toutiao'],
   weixin: {
     appId: 'wx3a602dc84f1c66c1',
     project: './playground/dist/build/mp-weixin',
@@ -32,6 +32,13 @@ export default defineConfig({
     upload: {
       appId: '2021003139676331',
       project: './playground/dist/build/mp-alipay'
+    }
+  },
+  toutiao: {
+    open: {
+      project: {
+        path: './playground/dist/build/mp-toutiao'
+      }
     }
   }
 })

@@ -22,7 +22,7 @@ export default defineConfig([
       format: 'esm'
     },
     external (id) {
-      return isBuiltin(id) || id === 'minidev'
+      return isBuiltin(id) || ['minidev', 'tt-ide-cli'].includes(id)
     },
     plugins: [
       nodeResolve({
